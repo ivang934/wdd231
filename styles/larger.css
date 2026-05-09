@@ -1,0 +1,31 @@
+@media screen and (min-width: 768px) {
+
+    nav .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    section:last-child {
+        grid-column: span 2;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .photo {
+        max-width: 100%;
+    }
+
+}
