@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Librería El Ateneo Grand Splendid",
+    "address": "Av. Santa Fe 1860, Recoleta, CABA",
+    "phone": "+54 11 4813-6052",
+    "website": "https://www.yenny-elateneo.com",
+    "image": "ateneo.jpg",
+    "level": 3,
+    "description": "Icónica librería instalada en un antiguo teatro. Centro cultural y comercial de referencia nacional."
+  },
+  {
+    "name": "Café Tortoni",
+    "address": "Av. de Mayo 829, Monserrat, CABA",
+    "phone": "+54 11 4342-4328",
+    "website": "https://www.cafetortoni.com.ar",
+    "image": "tortoni.jpg",
+    "level": 3,
+    "description": "El café más antiguo de Buenos Aires, fundado en 1858. Patrimonio histórico y turístico porteño."
+  },
+  {
+    "name": "Imprenta Gráfica del Sur",
+    "address": "Av. Independencia 2134, San Cristóbal, CABA",
+    "phone": "+54 11 4931-7845",
+    "website": "https://www.graficadelsur.com.ar",
+    "image": "imprenta.jpg",
+    "level": 2,
+    "description": "Empresa de impresión offset y digital con más de 30 años de trayectoria en el mercado gráfico."
+  },
+  {
+    "name": "Consultora Tech Palermo",
+    "address": "Av. Córdoba 4521, Palermo, CABA",
+    "phone": "+54 11 5280-3310",
+    "website": "https://www.techpalermo.com.ar",
+    "image": "techpalermo.jpg",
+    "level": 3,
+    "description": "Desarrollo de software, consultoría IT y transformación digital para empresas medianas y grandes."
+  },
+  {
+    "name": "Mercado de San Telmo",
+    "address": "Defensa 961, San Telmo, CABA",
+    "phone": "+54 11 4362-5544",
+    "website": "https://www.mercadodesantelmo.com",
+    "image": "santelmo.jpg",
+    "level": 2,
+    "description": "Mercado histórico con gastronomía, antigüedades y artesanías. Punto de encuentro cultural y comercial."
+  },
+  {
+    "name": "Distribuidora Pallets Sur",
+    "address": "Av. Roca 2800, Mataderos, CABA",
+    "phone": "+54 11 4687-1290",
+    "website": "https://www.palletssur.com.ar",
+    "image": "pallets.jpg",
+    "level": 1,
+    "description": "Logística y distribución mayorista. Depósito propio, flota de transporte y cobertura en GBA."
+  },
+  {
+    "name": "Clínica Santa Lucía",
+    "address": "Av. Rivadavia 5500, Caballito, CABA",
+    "phone": "+54 11 4433-9000",
+    "website": "https://www.clinicasantalucia.com.ar",
+    "image": "clinica.jpg",
+    "level": 2,
+    "description": "Prestadora médica con especialidades clínicas, quirúrgicas y diagnóstico por imágenes."
+  },
+  {
+    "name": "Estudio Jurídico Bernal & Asociados",
+    "address": "Florida 890, Microcentro, CABA",
+    "phone": "+54 11 4312-6677",
+    "website": "https://www.bernalasociados.com.ar",
+    "image": "juridico.jpg",
+    "level": 1,
+    "description": "Asesoramiento legal en derecho comercial, societario, laboral y propiedad intelectual."
+  }
+]
