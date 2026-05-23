@@ -1,199 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- META -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>WDD231 Course Home Page</title>
-    <meta name="description" content="WDD231 Course Home Page Assignment">
-    <meta name="author" content="Ivan Gonzalez">
+  <title>Home | Buenos Aires Capital Federal Chamber of Commerce</title>
+  <meta name="description" content="The Buenos Aires Capital Federal Chamber of Commerce drives business development, connects local entrepreneurs, and strengthens the city's economy.">
+  <meta name="author" content="Iván">
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Buenos Aires Capital Federal Chamber of Commerce">
+  <meta property="og:description" content="Driving commerce and business growth in Buenos Aires, Argentina.">
+  <meta property="og:image"       content="https://tuusuario.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url"         content="https://tuusuario.github.io/wdd231/chamber/index.html">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-
-    <!-- JAVASCRIPT -->
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
+  <!-- CSS: normalize → small → larger -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header>
+  <!-- Skip navigation for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <div class="header-top">
+  <!-- ========= HEADER ========= -->
+  <header>
+    <div class="header-brand">
+      <img src="images/logo.svg" alt="Buenos Aires Chamber of Commerce Logo" width="56" height="56"
+           onerror="this.style.display='none'">
+      <div>
+        <h1>Chamber of Commerce<br>Capital Federal</h1>
+        <p class="tagline">Buenos Aires, Argentina</p>
+      </div>
+    </div>
+  </header>
 
-            <div class="logo-box">
-                <img 
-                    src="images/logo.svg" 
-                    alt="Website Logo"
-                    width="60"
-                    height="60"
-                >
+  <!-- ========= NAV ========= -->
+  <nav aria-label="Main navigation">
+    <div class="nav-toggle">
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <ul id="nav-menu" role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="discover.html">Discover CABA</a></li>
+    </ul>
+  </nav>
 
-                <span>Site Name</span>
-            </div>
+  <!-- ========= MAIN ========= -->
+  <main id="main-content">
 
-            <!-- HAMBURGER BUTTON -->
-            <button id="menu" aria-label="Open Navigation Menu"></button>
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        src="images/hero.jpg"
+        alt="Aerial view of Buenos Aires with the Obelisk and 9 de Julio Avenue"
+        width="1200"
+        height="500"
+        loading="eager"
+        onerror="this.style.display='none'"
+      >
+      <div class="hero-content">
+        <h2>Connecting Buenos Aires<br>Business Community</h2>
+        <a href="join.html" class="btn-cta">Join the Chamber</a>
+      </div>
+    </section>
 
+    <!-- HOME GRID: Events / Weather / Spotlights -->
+    <div class="home-grid">
+
+      <!-- EVENTS -->
+      <section class="events-section" aria-labelledby="events-title">
+        <h2 class="section-title" id="events-title">📅 Upcoming Events</h2>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Jun</span>
+            <span class="ev-day">05</span>
+          </div>
+          <div class="event-info">
+            <h3>CABA Entrepreneurs Fair 2025</h3>
+            <p>Kirchner Cultural Center · 9:00 AM – 6:00 PM · Free admission</p>
+          </div>
         </div>
 
-        <!-- NAVIGATION -->
-        <nav>
-
-            <ul class="navigation">
-
-                <li>
-                    <a href="index.html" class="active">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="chamber/index.html">
-                        Chamber Project
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Final Project
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- MAIN -->
-    <main>
-
-        <h1>Home</h1>
-
-        <!-- ABOUT SECTION -->
-        <section class="card about">
-
-            <h2>About Me</h2>
-
-            <p>
-                Hello! My name is Ivan Gonzalez.
-                I am currently studying Software Development and Web Design.
-                I enjoy creating responsive websites using HTML, CSS, and JavaScript.
-                This page is part of my WDD231 course assignments.
-            </p>
-
-        </section>
-
-        <!-- PHOTO SECTION -->
-        <section class="card photo">
-
-            <h2>Student Photo</h2>
-
-            <img 
-                src="images/profile.jpg"
-                alt="Student Photo"
-                width="300"
-                height="400"
-            >
-
-        </section>
-
-        <!-- COURSES SECTION -->
-        <section class="card certificate">
-
-            <h2>Web Certificate Courses</h2>
-
-            <!-- FILTER BUTTONS -->
-            <div class="filter-buttons">
-
-                <button id="all">
-                    All
-                </button>
-
-                <button id="cse">
-                    CSE
-                </button>
-
-                <button id="wdd">
-                    WDD
-                </button>
-
-            </div>
-
-            <!-- DYNAMIC COURSE CARDS -->
-            <div id="courses"></div>
-
-            <!-- TOTAL CREDITS -->
-            <p class="credits">
-                Total Credits: 
-                <span id="credits"></span>
-            </p>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-
-        <!-- SOCIAL LINKS -->
-        <div class="socials">
-
-            <a 
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-            >
-                GitHub
-            </a>
-
-            <a 
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-            >
-                LinkedIn
-            </a>
-
-            <a 
-                href="https://x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X Social Media"
-            >
-                X
-            </a>
-
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Jun</span>
+            <span class="ev-day">14</span>
+          </div>
+          <div class="event-info">
+            <h3>Networking: Food &amp; Hospitality Sector</h3>
+            <p>Hotel Intercontinental, Moreno 809 · 7:00 PM · Members &amp; affiliates</p>
+          </div>
         </div>
 
-        <!-- COPYRIGHT -->
-        <p>
-            &copy; 
-            <span id="currentyear"></span>
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Jun</span>
+            <span class="ev-day">21</span>
+          </div>
+          <div class="event-info">
+            <h3>Seminar: SME Financing 2025</h3>
+            <p>Chamber HQ, Av. de Mayo 1370 · 10:00 AM – 1:00 PM · Registration required</p>
+          </div>
+        </div>
 
-            | Ivan Gonzalez | Argentina
-        </p>
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Jul</span>
+            <span class="ev-day">03</span>
+          </div>
+          <div class="event-info">
+            <h3>Exports &amp; Imported Goods Workshop</h3>
+            <p>Buenos Aires Stock Exchange, Florida 120 · 9:00 AM · Limited seats</p>
+          </div>
+        </div>
 
-        <!-- LAST MODIFIED -->
-        <p id="lastModified"></p>
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Jul</span>
+            <span class="ev-day">17</span>
+          </div>
+          <div class="event-info">
+            <h3>Annual General Members Assembly</h3>
+            <p>Chamber HQ, Av. de Mayo 1370 · 6:00 PM · Active members only</p>
+          </div>
+        </div>
 
-    </footer>
+      </section>
 
+      <!-- WEATHER -->
+      <section class="weather-section" aria-labelledby="weather-title">
+        <h2 class="section-title" id="weather-title">🌤️ Buenos Aires Weather</h2>
+        <div id="weather-container">
+          <p class="loading-msg">Loading weather...</p>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHTS -->
+      <section class="spotlights-section" aria-labelledby="spotlights-title">
+        <h2 class="section-title" id="spotlights-title">⭐ Member Spotlights</h2>
+        <div id="spotlights-container" class="spotlights-grid">
+          <p class="loading-msg">Loading spotlights...</p>
+        </div>
+      </section>
+
+    </div><!-- /.home-grid -->
+
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p><strong>Buenos Aires Capital Federal Chamber of Commerce</strong></p>
+        <p>Av. de Mayo 1370, Monserrat, Buenos Aires</p>
+        <p>📞 +54 11 4381-8480</p>
+        <p>📧 <a href="mailto:info@camaraCF.org.ar">info@camaraCF.org.ar</a></p>
+      </div>
+      <div class="footer-dev">
+        <p>Iván &mdash; WDD 231</p>
+        <p>© <span id="current-year"></span> Buenos Aires Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/index.js"></script>
 </body>
 </html>

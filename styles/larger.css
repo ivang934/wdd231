@@ -1,31 +1,173 @@
-@media screen and (min-width: 768px) {
+/* ===========================
+   CHAMBER CABA - larger.css
+   Styles for wider viewports
+   =========================== */
 
-    nav .navigation {
-        display: flex;
-        gap: 1rem;
-    }
+/* ---- Tablet: 640px+ ---- */
+@media (min-width: 640px) {
 
-    #menu {
-        display: none;
-    }
+  /* Header */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.2rem 2rem;
+  }
 
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1rem;
-        align-items: start;
-    }
+  .header-brand {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    section:last-child {
-        grid-column: span 2;
-    }
+  header h1 { font-size: 1.7rem; }
 
-    .card {
-        padding: 1.5rem;
-    }
+  /* Nav */
+  #hamburger { display: none; }
 
-    .photo {
-        max-width: 100%;
-    }
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    padding: 0 1rem;
+  }
 
+  nav ul li a {
+    border-top: none;
+    padding: 0.75rem 1rem;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: rgba(255,255,255,0.18);
+  }
+
+  /* Main */
+  main { padding: 2rem 1.5rem; }
+
+  /* Page header */
+  .page-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header h2 { font-size: 1.9rem; }
+
+  /* Grid: 2 cols */
+  #members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* List items: row layout */
+  .member-list-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .member-list-item .list-info { flex: 1; }
+  .member-list-item .list-contact { text-align: right; white-space: nowrap; }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
+
+/* ---- Desktop: 900px+ ---- */
+@media (min-width: 900px) {
+
+  header { padding: 1.2rem 3rem; }
+  header h1 { font-size: 1.9rem; }
+
+  main { padding: 2.5rem 3rem; }
+
+  /* Grid: 3 cols */
+  #members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  nav ul { padding: 0 2rem; }
+
+  footer { padding: 2rem 3rem; }
+}
+
+/* ---- Wide: 1200px+ ---- */
+@media (min-width: 1200px) {
+
+  /* Grid: 4 cols */
+  #members-container.grid-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================================================
+   HOME PAGE RESPONSIVE LAYOUT
+   ================================================ */
+
+/* ---- Tablet: 640px+ ---- */
+@media (min-width: 640px) {
+
+  .hero { min-height: 340px; }
+  .hero img { min-height: 340px; }
+  .hero-content h2 { font-size: 2rem; }
+
+  /* Spotlights: 2 columns */
+  .spotlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Desktop: 900px+ ---- */
+@media (min-width: 900px) {
+
+  .hero { min-height: 440px; border-radius: var(--radius); }
+  .hero img { min-height: 440px; }
+  .hero-content { padding: 2.5rem 3rem; }
+  .hero-content h2 { font-size: 2.6rem; max-width: 600px; }
+
+  /* Home: side-by-side layout */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+
+  /* Left column: events takes full height */
+  .events-section {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  /* Right column: weather + spotlights stack */
+  .weather-section {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .spotlights-section {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Back to single column for spotlights (sidebar) */
+  .spotlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-card { flex-direction: column; align-items: flex-start; }
+  .spotlight-logo { width: 100%; height: 120px; border-radius: 6px; }
+}
+
+/* ---- Wide: 1200px+ ---- */
+@media (min-width: 1200px) {
+  .home-grid {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
