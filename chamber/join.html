@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Join | Buenos Aires Capital Federal Chamber of Commerce</title>
+  <meta name="description" content="Apply to join the Buenos Aires Capital Federal Chamber of Commerce with our membership application form.">
+  <meta name="author" content="Iván">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .page-header { border-bottom: 2px solid var(--clr-secondary); margin-bottom: 1.5rem; }
+    .page-header h2 { font-family: var(--font-heading); font-size: 1.65rem; color: var(--clr-primary); margin-bottom: 0.25rem; }
+    .page-header p { margin: 0; color: var(--clr-muted); }
+
+    .join-layout { display: grid; gap: 2rem; }
+    .join-form, .membership-sidebar { background: var(--clr-surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; }
+    .join-form fieldset { border: none; margin: 0; padding: 0; }
+    .join-form legend { font-family: var(--font-heading); font-size: 1.15rem; color: var(--clr-primary); margin-bottom: 1rem; }
+    .form-row { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+    .form-row label { display: flex; flex-direction: column; gap: 0.35rem; font-weight: 600; color: var(--clr-primary); }
+    .form-row input,
+    .form-row select,
+    .form-row textarea { width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--clr-border); border-radius: var(--radius); background: #fff; color: var(--clr-text); font: inherit; }
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus { outline: 3px solid rgba(200,146,42,0.25); outline-offset: 2px; border-color: var(--clr-secondary); }
+    .form-row small { color: var(--clr-muted); }
+    .form-actions { display: flex; justify-content: flex-end; }
+    .form-actions input[type="submit"] { background: var(--clr-primary); color: #fff; border: none; padding: 0.95rem 1.5rem; border-radius: var(--radius); font-weight: 700; cursor: pointer; transition: transform var(--transition), background var(--transition); }
+    .form-actions input[type="submit"]:hover { background: #0e1a2f; transform: translateY(-1px); }
+
+    .membership-sidebar h3 { margin-top: 0; margin-bottom: 1rem; font-family: var(--font-heading); color: var(--clr-primary); }
+    .membership-cards { display: grid; gap: 1rem; }
+    .membership-card { background: linear-gradient(180deg, #fff 0%, #f7f6f2 100%); border: 1px solid var(--clr-border); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); animation: card-enter 0.7s ease both; }
+    .membership-card:nth-child(1) { animation-delay: 0.1s; }
+    .membership-card:nth-child(2) { animation-delay: 0.2s; }
+    .membership-card:nth-child(3) { animation-delay: 0.3s; }
+    .membership-card:nth-child(4) { animation-delay: 0.4s; }
+    @keyframes card-enter {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .membership-card h4 { margin: 0 0 0.5rem; font-size: 1.05rem; color: var(--clr-primary); }
+    .membership-card p { margin: 0 0 1rem; color: var(--clr-muted); line-height: 1.5; }
+    .membership-card a { font-weight: 700; color: var(--clr-secondary); }
+    .membership-card a:hover { text-decoration: underline; }
+
+    dialog { width: min(95%, 460px); border: none; border-radius: 18px; padding: 1.5rem; box-shadow: 0 18px 42px rgba(26,46,74,0.25); }
+    dialog::backdrop { background: rgba(0,0,0,0.45); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .modal-header h3 { margin: 0; font-family: var(--font-heading); font-size: 1.25rem; color: var(--clr-primary); }
+    .modal-close { background: none; border: none; color: var(--clr-text); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+    .modal-content p { margin: 0 0 1rem; color: var(--clr-muted); }
+    .modal-content ul { margin: 0; padding-left: 1.25rem; color: var(--clr-text); }
+    .modal-content li { margin-bottom: 0.65rem; }
+
+    .callout { background: #fff8e0; border-left: 4px solid var(--clr-secondary); padding: 1rem; border-radius: var(--radius); margin-bottom: 1.5rem; color: var(--clr-text); }
+
+    @media (min-width: 800px) {
+      .join-layout { grid-template-columns: 1.4fr 0.9fr; align-items: start; }
+      .join-form, .membership-sidebar { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-brand">
+      <img src="images/logo.svg" alt="Buenos Aires Chamber of Commerce Logo" width="56" height="56"
+           onerror="this.style.display='none'">
+      <div>
+        <h1>Chamber of Commerce<br>Capital Federal</h1>
+        <p class="tagline">Buenos Aires, Argentina</p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-toggle">
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <ul id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html" class="active">Join Us</a></li>
+      <li><a href="discover.html">Discover CABA</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div>
+        <h2>Membership Application</h2>
+        <p>Complete the form below to apply for chamber membership and explore our organization benefits.</p>
+      </div>
+    </section>
+
+    <div class="join-layout">
+      <section class="join-form" aria-labelledby="apply-heading">
+        <h2 id="apply-heading" class="visually-hidden">Application form</h2>
+        <div class="callout">
+          <strong>Required fields:</strong> first name, last name, email, mobile phone, business name, and membership level.
+        </div>
+
+        <form method="get" action="thankyou.html">
+          <fieldset>
+            <legend>Applicant information</legend>
+
+            <div class="form-row">
+              <label>
+                First name
+                <input type="text" name="firstName" title="Applicant first name" autocomplete="given-name" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Last name
+                <input type="text" name="lastName" title="Applicant last name" autocomplete="family-name" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Organizational title
+                <input type="text" name="orgTitle" title="Applicant organization title" autocomplete="organization-title" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\- ]{7,}$" placeholder="e.g. Executive Director" minlength="7">
+                <small>Letters, spaces, and hyphens only. Minimum 7 characters.</small>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Email address
+                <input type="email" name="email" title="Applicant email address" autocomplete="email" placeholder="name@example.com" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Mobile phone
+                <input type="tel" name="phone" title="Applicant mobile phone number" autocomplete="tel" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Business or organization name
+                <input type="text" name="business" title="Business or organization name" autocomplete="organization" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Membership level
+                <select name="level" title="Select membership level" required>
+                  <option value="">Choose a level</option>
+                  <option value="np">NP Membership (non profit, no fee)</option>
+                  <option value="bronze">Bronze Membership</option>
+                  <option value="silver">Silver Membership</option>
+                  <option value="gold">Gold Membership</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Business description
+                <textarea name="description" title="Business or organization description" placeholder="Tell us about your organization"></textarea>
+              </label>
+            </div>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+          </fieldset>
+
+          <div class="form-actions">
+            <input type="submit" value="Apply for Membership">
+          </div>
+        </form>
+      </section>
+
+      <aside class="membership-sidebar">
+        <h3>Membership levels</h3>
+        <div class="membership-cards">
+          <article class="membership-card">
+            <h4>NP Membership</h4>
+            <p>For non-profit organizations with no annual fee and access to advocacy and networking.</p>
+            <a href="#" data-dialog="modal-np">More information</a>
+          </article>
+
+          <article class="membership-card">
+            <h4>Bronze Membership</h4>
+            <p>Entry-level membership with digital visibility and event participation.</p>
+            <a href="#" data-dialog="modal-bronze">More information</a>
+          </article>
+
+          <article class="membership-card">
+            <h4>Silver Membership</h4>
+            <p>Includes training sessions, advertising opportunities, and event discounts.</p>
+            <a href="#" data-dialog="modal-silver">More information</a>
+          </article>
+
+          <article class="membership-card">
+            <h4>Gold Membership</h4>
+            <p>Premium benefits with spotlight advertising, exclusive events, and sponsorship priority.</p>
+            <a href="#" data-dialog="modal-gold">More information</a>
+          </article>
+        </div>
+      </aside>
+    </div>
+
+    <dialog id="modal-np" aria-labelledby="modal-np-title">
+      <div class="modal-header">
+        <h3 id="modal-np-title">NP Membership Benefits</h3>
+        <button class="modal-close" type="button" aria-label="Close NP Membership details">×</button>
+      </div>
+      <div class="modal-content">
+        <p>NP Membership is ideal for registered non-profit organizations seeking chamber support without a fee.</p>
+        <ul>
+          <li>Access to non-profit networking events</li>
+          <li>Advocacy and community outreach resources</li>
+          <li>Inclusion in chamber digital directories</li>
+          <li>Member-only newsletters and volunteer initiatives</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
+      <div class="modal-header">
+        <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+        <button class="modal-close" type="button" aria-label="Close Bronze Membership details">×</button>
+      </div>
+      <div class="modal-content">
+        <p>Bronze Membership offers affordable participation with visibility and chamber support.</p>
+        <ul>
+          <li>Basic business listing in the directory</li>
+          <li>Invitations to chamber events</li>
+          <li>Member updates and communications</li>
+          <li>Access to entry-level business resources</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-silver" aria-labelledby="modal-silver-title">
+      <div class="modal-header">
+        <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+        <button class="modal-close" type="button" aria-label="Close Silver Membership details">×</button>
+      </div>
+      <div class="modal-content">
+        <p>Silver Membership adds promotional and training advantages for growing organizations.</p>
+        <ul>
+          <li>Featured advertising slots on the home page</li>
+          <li>Discounts on workshops and seminars</li>
+          <li>Priority invites to networking events</li>
+          <li>Access to business mentorship programs</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-gold" aria-labelledby="modal-gold-title">
+      <div class="modal-header">
+        <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+        <button class="modal-close" type="button" aria-label="Close Gold Membership details">×</button>
+      </div>
+      <div class="modal-content">
+        <p>Gold Membership delivers the highest exposure, premier events, and sponsorship opportunities.</p>
+        <ul>
+          <li>Spotlight advertising on the homepage</li>
+          <li>Exclusive leadership events and dinners</li>
+          <li>Early access to sponsorships and partnerships</li>
+          <li>Complimentary training and executive briefings</li>
+        </ul>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p><strong>Buenos Aires Capital Federal Chamber of Commerce</strong></p>
+        <p>Av. de Mayo 1370, Monserrat, Buenos Aires</p>
+        <p>📞 +54 11 4381-8480</p>
+        <p>📧 <a href="mailto:info@camaraCF.org.ar">info@camaraCF.org.ar</a></p>
+      </div>
+      <div class="footer-dev">
+        <p>Iván &mdash; WDD 231</p>
+        <p>© <span id="current-year"></span> Buenos Aires Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/join.js"></script>
+</body>
+</html>
