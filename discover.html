@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover CABA | Buenos Aires Capital Federal Chamber of Commerce</title>
+  <meta name="description" content="History, demographics, and points of interest in Buenos Aires Capital Federal.">
+  <meta name="author" content="Iván">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small_index.css">
+  <link rel="stylesheet" href="styles/larger_index.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-brand">
+      <img src="images/logo.svg" alt="Buenos Aires Chamber of Commerce Logo" width="56" height="56">
+      <div>
+        <h1>Chamber of Commerce<br>Capital Federal</h1>
+        <p class="tagline">Buenos Aires, Argentina</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="discover.html" class="active" aria-current="page">Discover CABA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h2>Discover Buenos Aires</h2>
+      <p>History, demographics, current events, and an image montage of Capital Federal.</p>
+      <!-- TODO (next week): image montage grid using CSS Grid areas -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p><strong>Buenos Aires Capital Federal Chamber of Commerce</strong></p>
+        <p>Av. de Mayo 1370, Monserrat, Buenos Aires</p>
+        <p>📞 +54 11 4381-8480</p>
+        <p>📧 <a href="mailto:info@camaraCF.org.ar">info@camaraCF.org.ar</a></p>
+      </div>
+      <div class="footer-dev">
+        <p>Iván &mdash; WDD 231</p>
+        <p>© <span id="current-year"></span> Buenos Aires Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/site.js"></script>
+</body>
+</html>

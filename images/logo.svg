@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Buenos Aires Capital Federal Chamber of Commerce logo</title>
+  <rect width="56" height="56" fill="#16232E"/>
+  <circle cx="28" cy="28" r="20" fill="none" stroke="#C08A2E" stroke-width="2"/>
+  <text x="28" y="34" font-family="Georgia, serif" font-size="20" fill="#EFF3F6" text-anchor="middle">CF</text>
+</svg>

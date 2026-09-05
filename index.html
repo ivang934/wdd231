@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Home | Buenos Aires Capital Federal Chamber of Commerce</title>
+  <meta name="description" content="The Buenos Aires Capital Federal Chamber of Commerce drives business development, connects local entrepreneurs, and strengthens the city's economy.">
+  <meta name="author" content="Iván">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Buenos Aires Capital Federal Chamber of Commerce">
+  <meta property="og:description" content="Driving commerce and business growth in Buenos Aires, Argentina.">
+  <meta property="og:image"       content="https://tuusuario.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url"         content="https://tuusuario.github.io/wdd231/chamber/index.html">
+
+  <!-- CSS: normalize -> mobile-first -> larger viewports -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small_index.css">
+  <link rel="stylesheet" href="styles/larger_index.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========= HEADER ========= -->
+  <header>
+    <div class="header-brand">
+      <img src="images/logo.svg" alt="Buenos Aires Chamber of Commerce Logo" width="56" height="56">
+      <div>
+        <h1>Chamber of Commerce<br>Capital Federal</h1>
+        <p class="tagline">Buenos Aires, Argentina</p>
+      </div>
+    </div>
+
+    <!-- ========= NAV ========= -->
+    <nav aria-label="Main navigation">
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu" role="list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join Us</a></li>
+        <li><a href="discover.html">Discover CABA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========= MAIN ========= -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        src="images/hero.jpg"
+        alt="Aerial view of Buenos Aires with the Obelisk and 9 de Julio Avenue"
+        width="1200"
+        height="500"
+        loading="eager"
+      >
+      <div class="hero-content">
+        <h2>Connecting Buenos Aires<br>Business Community</h2>
+        <a href="join.html" class="btn-cta">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- HOME GRID: Events / Weather / Spotlights -->
+    <div class="home-grid">
+
+      <!-- EVENTS -->
+      <section class="events-section" aria-labelledby="events-title">
+        <h2 class="section-title" id="events-title">Upcoming Events</h2>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Oct</span>
+            <span class="ev-day">05</span>
+          </div>
+          <div class="event-info">
+            <h3>CABA Entrepreneurs Fair 2026</h3>
+            <p>Kirchner Cultural Center · 9:00 AM – 6:00 PM · Free admission</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Oct</span>
+            <span class="ev-day">14</span>
+          </div>
+          <div class="event-info">
+            <h3>Networking: Food &amp; Hospitality Sector</h3>
+            <p>Hotel Intercontinental, Moreno 809 · 7:00 PM · Members &amp; affiliates</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Oct</span>
+            <span class="ev-day">21</span>
+          </div>
+          <div class="event-info">
+            <h3>Seminar: SME Financing 2026</h3>
+            <p>Chamber HQ, Av. de Mayo 1370 · 10:00 AM – 1:00 PM · Registration required</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Nov</span>
+            <span class="ev-day">03</span>
+          </div>
+          <div class="event-info">
+            <h3>Exports &amp; Imported Goods Workshop</h3>
+            <p>Buenos Aires Stock Exchange, Florida 120 · 9:00 AM · Limited seats</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-box">
+            <span class="ev-month">Nov</span>
+            <span class="ev-day">17</span>
+          </div>
+          <div class="event-info">
+            <h3>Annual General Members Assembly</h3>
+            <p>Chamber HQ, Av. de Mayo 1370 · 6:00 PM · Active members only</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- WEATHER -->
+      <section class="weather-section" aria-labelledby="weather-title">
+        <h2 class="section-title" id="weather-title">Buenos Aires Weather</h2>
+        <div id="weather-container">
+          <p class="loading-msg">Loading weather...</p>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHTS -->
+      <section class="spotlights-section" aria-labelledby="spotlights-title">
+        <h2 class="section-title" id="spotlights-title">Member Spotlights</h2>
+        <div id="spotlights-container" class="spotlights-grid">
+          <p class="loading-msg">Loading spotlights...</p>
+        </div>
+      </section>
+
+    </div><!-- /.home-grid -->
+
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p><strong>Buenos Aires Capital Federal Chamber of Commerce</strong></p>
+        <p>Av. de Mayo 1370, Monserrat, Buenos Aires</p>
+        <p>📞 +54 11 4381-8480</p>
+        <p>📧 <a href="mailto:info@camaraCF.org.ar">info@camaraCF.org.ar</a></p>
+      </div>
+      <div class="footer-dev">
+        <p>Iván &mdash; WDD 231</p>
+        <p>© <span id="current-year"></span> Buenos Aires Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/site.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

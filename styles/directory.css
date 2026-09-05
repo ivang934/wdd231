@@ -1,0 +1,26 @@
+/* Directory-specific layout — extends small_index.css / larger_index.css */
+.page-intro { padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--color-line); }
+.page-intro h2 { font-size: 1.4rem; margin-bottom: var(--space-1); }
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2);
+}
+
+.directory-card {
+  border-top: 3px solid var(--color-gold);
+  padding-top: var(--space-2);
+}
+.directory-card h3 { font-size: 1rem; }
+.directory-card .membership-level {
+  font-size: 0.75rem; color: var(--color-teal); font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .directory-grid { grid-template-columns: repeat(2, 1fr); padding: var(--space-4); }
+}
+@media (min-width: 1100px) {
+  .directory-grid { grid-template-columns: repeat(3, 1fr); }
+}
